@@ -24,6 +24,15 @@ concurrency:
   group: 'pages'
   cancel-in-progress: false
 
+env:
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  CLERK_SECRET_KEY: ${{ secrets.CLERK_SECRET_KEY }}
+  NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${{ vars.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY }}
+  NEXT_PUBLIC_CLERK_SIGN_IN_URL: ${{ vars.NEXT_PUBLIC_CLERK_SIGN_IN_URL }}
+  NEXT_PUBLIC_CLERK_SIGN_UP_URL: ${{ vars.NEXT_PUBLIC_CLERK_SIGN_UP_URL }}
+  NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL: ${{ vars.NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL }}
+  NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL: ${{ vars.NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL }}
+
 jobs:
   # Build job
   build:
@@ -48,14 +57,6 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          CLERK_SECRET_KEY: ${{ secrets.CLERK_SECRET_KEY }}
-          NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${{ vars.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY }}
-          NEXT_PUBLIC_CLERK_SIGN_IN_URL: ${{ vars.NEXT_PUBLIC_CLERK_SIGN_IN_URL }}
-          NEXT_PUBLIC_CLERK_SIGN_UP_URL: ${{ vars.NEXT_PUBLIC_CLERK_SIGN_UP_URL }}
-          NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL: ${{ vars.NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL }}
-          NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL: ${{ vars.NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL }}
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
