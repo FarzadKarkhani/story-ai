@@ -6,7 +6,7 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-export const POST = async (req: Request) => {
+export async function POST(req: Request) {
   try {
     const { userId } = auth();
     const body = await req.json();
@@ -34,4 +34,4 @@ export const POST = async (req: Request) => {
     console.log('[CAPTION_ERROR]', error);
     return new NextResponse('Internal error', { status: 500 });
   }
-};
+}
