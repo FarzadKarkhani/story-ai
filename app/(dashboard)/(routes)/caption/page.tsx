@@ -15,10 +15,10 @@ import { Button } from '@/components/ui/button';
 import { Empty } from '@/components/empty';
 import { Loader } from '@/components/loader';
 import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
-
-import { formSchema } from './constants';
 import { cn } from '@/lib/utils';
 import { useProModal } from '@/hooks/use-pro-modal';
+
+import { formSchema } from './constants';
 
 const CaptionPage = () => {
   const router = useRouter();
