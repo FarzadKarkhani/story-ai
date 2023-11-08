@@ -43,7 +43,7 @@ export async function GET() {
           price_data: {
             currency: 'USD',
             product_data: {
-              name: 'Story AI Pro',
+              name: 'AI Caption Pro',
               description: 'Unlimited Generations',
             },
             unit_amount: 2000,

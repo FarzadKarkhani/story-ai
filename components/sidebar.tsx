@@ -57,7 +57,7 @@ const Sidebar = ({
             <Image fill alt="logo" src="/logo.png" />
           </div>
           <h1 className={cn('text-2xl font-bold', montserrat.className)}>
-            Story AI
+            AI Caption
           </h1>
         </Link>
         <div className="space-y-1">

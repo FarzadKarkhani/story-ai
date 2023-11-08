@@ -7,7 +7,7 @@ import { ModalProvider } from '@/components/modal-provider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Story AI',
+  title: 'AI Caption',
   description:
     'Help people to add caption and picture to add stories and posts via generated AI powered by ChatGPT',
 };
